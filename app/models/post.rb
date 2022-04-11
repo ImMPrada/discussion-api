@@ -5,4 +5,6 @@ class Post < ApplicationRecord
 
   belongs_to :user
   belongs_to :receiver, class_name: "Post", optional: true
+
+  scope :main_posts, -> { where(receiver_id: nil) }
 end
