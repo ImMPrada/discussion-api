@@ -11,6 +11,10 @@ class User < ApplicationRecord
   end
 
   def react_to(post, reaction_type)
-    reactions.create(post: post, reaction_type: reaction_type)
+    reaction = reactions.find_or_initialize_by(post: post)
+    reaction.reaction_type = reaction_type
+
+    reaction.save
+    reaction
   end
 end

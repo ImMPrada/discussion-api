@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :posts
+    resources :reactions, only: [:create]
   end
 end
