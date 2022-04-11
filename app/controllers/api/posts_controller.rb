@@ -17,11 +17,10 @@ module Api
       render json: { errors: @post.errors.full_messages }, status: 422 unless @post.save
     end
 
-    def delete
-      @post = Post.find(delete_params[:id])
-      puts('HOLIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII')
-
-      render json: { errors: @post.errors.full_messages }, status: 422 unless @post.destroy
+    def destroy
+      @post = Post.find(params[:id]).destroy
+      
+      head :no_content
     end
     
     private
