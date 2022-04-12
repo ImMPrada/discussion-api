@@ -4,7 +4,7 @@ This is a WIP. Share ideas with others and discuse it :) you can share ideas, ra
 
 ![image](https://user-images.githubusercontent.com/26731448/162986640-19dd4cb9-a2d1-4c09-99bf-3c351ac85e45.png)
 
-This is the backend api of the component
+This is the backend api of the web
 
 Can find frontend repo here: https://github.com/ImMPrada/discussion
 
@@ -13,7 +13,6 @@ Can find frontend repo here: https://github.com/ImMPrada/discussion
 - Ruby on Rails 5
 - MySQL
 - JSBuilder for responses rendering
-- For some services this backend consumes data from a 3rd party Cat API
 
 ## Live Demo
 --------------------
