@@ -20,7 +20,7 @@ module Api
     def destroy
       @post = Post.find(params[:id]).destroy
       
-      head :no_content
+      render json: {}
     end
     
     private
