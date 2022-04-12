@@ -3,7 +3,7 @@ class Reaction < ApplicationRecord
   validates :reaction_type, presence: true, inclusion: { in: %w(like dislike) }
 
   belongs_to :post
-  belongs_to :user
+  belongs_to :user, optional: true
 
   scope :likes, -> { where(reaction_type: :like) }
   scope :dislikes, -> { where(reaction_type: :dislike) }

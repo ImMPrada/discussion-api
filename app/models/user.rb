@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   before_create :set_default_avatar
+  UNKNOWN_USER_AVATAR = 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/925px-Unknown_person.jpg'
+  UNKNOWN_USER_NICKNAME = 'JohnDoe'
 
   has_many :posts
   has_many :reactions
