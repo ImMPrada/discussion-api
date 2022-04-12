@@ -12,4 +12,8 @@ class Post < ApplicationRecord
   def reactions_score
     reactions.likes.count - reactions.dislikes.count
   end
+
+  def users_reacted_ids
+    reactions.map {|reaction| reaction.user.id}
+  end
 end
