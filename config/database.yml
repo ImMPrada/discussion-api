@@ -50,6 +50,4 @@ test:
 #
 production:
   <<: *default
-  database: discussion_api_production
-  username: discussion_api
-  password: <%= ENV["DISCUSSION_API_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
