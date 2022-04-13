@@ -67,7 +67,7 @@ Feel free to visit the API docs here.
 Miguel Prada
 
 GitHub: @ImMPrada
-LinkedIn: /in/ImMPrada/
+LinkedIn: /in/miguel-prada-15b7bb224/
 Contributing
 Contributions, issues, and feature requests are welcome!
 
