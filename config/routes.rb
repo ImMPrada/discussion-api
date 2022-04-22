@@ -4,20 +4,11 @@ Rails.application.routes.draw do
   
   # Defines the root path route ("/")
   # root "articles#index"
+  devise_for :users,
+            defaults: { format: :json }
   
   namespace :api do
     resources :posts
     resources :reactions, only: [:create]
-    devise_for :users,
-               path: '',
-               path_names: {
-                 sign_in: 'login',
-                 sign_out: 'logout',
-                 registration: 'signup'
-               },
-               controllers: {
-                 sessions: 'sessions',
-                 registrations: 'registrations'
-               }
   end
 end
