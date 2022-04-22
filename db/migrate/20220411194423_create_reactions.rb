@@ -1,4 +1,4 @@
-class CreateReactions < ActiveRecord::Migration[7.0]
+class CreateReactions < ActiveRecord::Migration[6.1]
   def change
     create_table :reactions do |t|
       t.references :user, foreign_key: { to_table: :users }

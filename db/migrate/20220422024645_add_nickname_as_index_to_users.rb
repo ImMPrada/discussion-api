@@ -1,4 +1,4 @@
-class AddNicknameAsIndexToUsers < ActiveRecord::Migration[7.0]
+class AddNicknameAsIndexToUsers < ActiveRecord::Migration[6.1]
   def change
     add_index :users, :nickname,                unique: true
   end

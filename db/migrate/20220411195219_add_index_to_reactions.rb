@@ -1,4 +1,4 @@
-class AddIndexToReactions < ActiveRecord::Migration[7.0]
+class AddIndexToReactions < ActiveRecord::Migration[6.1]
   def change
     add_index :reactions, [:user_id, :post_id], unique: true
   end
