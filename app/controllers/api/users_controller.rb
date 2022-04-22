@@ -1,5 +1,9 @@
 module Api
   class UsersController < ApiController
+    def create
+      byebug
+    end
+
     def show
 
       user = User.find_by(nickname: params[:id])
