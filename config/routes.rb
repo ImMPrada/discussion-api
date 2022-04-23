@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   
   # Defines the root path route ("/")
   # root "articles#index"
-  devise_for :users,
-            defaults: { format: :json }
+  
+  devise_for :users, 
+              path: 'api', 
+              path_names: { sign_in: 'login', sign_out: 'logout', registration: 'signup' },
+              defaults: { format: :json }
   
   namespace :api do
     resources :posts

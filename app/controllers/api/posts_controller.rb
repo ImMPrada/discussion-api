@@ -1,5 +1,7 @@
 module Api
   class PostsController < ApiController
+   
+
     def index
       @posts = Post.main_posts
     end

@@ -1,8 +1,6 @@
 module Api
   class UsersController < ApiController
-    def create
-      byebug
-    end
+    # skip_before_action :authenticate_user!, only: [:create]
 
     def show
 
