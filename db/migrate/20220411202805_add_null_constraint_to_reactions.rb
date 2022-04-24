@@ -1,4 +1,4 @@
-class AddNullConstraintToReactions < ActiveRecord::Migration[7.0]
+class AddNullConstraintToReactions < ActiveRecord::Migration[6.1]
   def change
     change_column_null :reactions, :reaction_type, false
   end

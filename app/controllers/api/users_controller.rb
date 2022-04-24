@@ -1,5 +1,7 @@
 module Api
   class UsersController < ApiController
+    # skip_before_action :authenticate_user!, only: [:create]
+
     def show
 
       user = User.find_by(nickname: params[:id])

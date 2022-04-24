@@ -1,4 +1,10 @@
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable,
+         :jwt_authenticatable,
+         jwt_revocation_strategy: JwtDenylist
   before_create :set_default_avatar
   UNKNOWN_USER_AVATAR = 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/925px-Unknown_person.jpg'
   UNKNOWN_USER_NICKNAME = 'JohnDoe'
